@@ -10,8 +10,8 @@ export const PokemonNotFound = () => {
       justifyContent="center"
       padding="248px"
     >
-      <Heading textAlign="center">Oops! Sorry</Heading>
-      <Text textAlign="center">Pokemon Not Found, please try Again!</Text>
+      <Heading textAlign="center">Oops! Pokemon Not Found</Heading>
+      <Text textAlign="center">Please try Again!</Text>
       
       <Center>
           <GoHomeButton />
