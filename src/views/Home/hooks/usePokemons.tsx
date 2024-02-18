@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Pokemon } from "../interfaces";
+import { Pokemon } from "../../../interfaces";
 import { useSearchParams } from "react-router-dom";
 import {
   OFFSET_MINIMUM,
   OFFSET_VARIATION,
   POKEMONS_LIMIT,
   POKEMONS_OFFSET_LIMIT,
-} from "../contants";
+} from "../../../contants";
 
 export const usePokemons = () => {
   const [searchParams, setSearchParams] = useSearchParams({

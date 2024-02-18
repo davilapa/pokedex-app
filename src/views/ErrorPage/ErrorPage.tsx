@@ -1,5 +1,6 @@
-import { Button, Center, Flex, Heading, Text } from "@chakra-ui/react";
-import { Link, useRouteError } from "react-router-dom";
+import { Center, Flex, Heading, Text } from "@chakra-ui/react";
+import { useRouteError } from "react-router-dom";
+import { GoHomeButton } from "../../components/GoHomeButton/GoHomeButton";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -19,12 +20,8 @@ export default function ErrorPage() {
         <i>{error.statusText || error.message}</i>
       </Text>
       <Center>
-        <Link to="/">
-          <Button variant="solid" backgroundColor="#F1BD35" color="#0C162F">
-            Go Home
-          </Button>
-        </Link>
-      </Center>
+          <GoHomeButton />
+        </Center>
     </Flex>
   );
 }

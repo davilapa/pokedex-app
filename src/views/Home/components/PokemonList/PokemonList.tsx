@@ -1,6 +1,6 @@
 import { Grid } from "@chakra-ui/react";
-import { PokemonCard } from "../PokemonCard/PokemonCard";
-import { Pokemon } from "../../interfaces";
+import { PokemonCard } from "./components/PokemonCard/PokemonCard";
+import { Pokemon } from "../../../../interfaces";
 import { ReactElement } from "react";
 
 export const PokemonList = ({
@@ -13,6 +13,7 @@ export const PokemonList = ({
       templateColumns="repeat(auto-fill, 270px)"
       gap={6}
       justifyContent="center"
+      marginY='20px'
     >
       {pokemons.map((pokemon, index) => (
         <PokemonCard

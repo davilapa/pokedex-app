@@ -1,5 +1,5 @@
 import { Button, Flex } from "@chakra-ui/react";
-import { OFFSET_MINIMUM, POKEMONS_OFFSET_LIMIT } from "../../contants";
+import { OFFSET_MINIMUM, POKEMONS_OFFSET_LIMIT } from "../../../../contants";
 import { ReactElement } from "react";
 
 export const Pagination = ({

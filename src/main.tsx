@@ -1,14 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
+import Home from "./views/Home/Home.tsx";
 import { ChakraProvider } from "@chakra-ui/react";
-import ErrorPage from "./views/ErrorPage.tsx";
+import ErrorPage from "./views/ErrorPage/ErrorPage.tsx";
+import { PokemonDetails } from "./views/PokemonDetails/PokemonDetails.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/pokemon/:id",
+    element: <PokemonDetails />,
     errorElement: <ErrorPage />,
   },
 ]);
