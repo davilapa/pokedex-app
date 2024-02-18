@@ -1,9 +1,11 @@
-# Consubanco Pokedex App
+# Pokedex App
 
-This a Pokedex App from Consubanco
+This a Pokedex App
 
 
 ## How to Run!
+
+Run `npm run dev`
 
 ## Stack
 
