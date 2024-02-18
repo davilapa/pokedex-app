@@ -9,29 +9,37 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { ReactElement } from "react";
+import { Pokemon } from "../../interfaces";
 
-export const PokemonCard = () => {
+export const PokemonCard = ({
+  pokemon,
+  id,
+}: {
+  pokemon: Pokemon;
+  id: number;
+}): ReactElement => {
+  const pokemonId = ('000' + (id + 1)).slice(-3);
+
   return (
-    <Card maxW="sm">
-      <CardBody>
+    <Card maxW="sm" m='5px'>
+      <CardBody position='relative'>
         <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="Green double couch with wooden legs"
           borderRadius="lg"
+          alt={pokemon.name}
+          height='215px'
+          src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemonId}.png`}
+          width='215px'
         />
         <Stack mt="6" spacing="3">
-          <Heading size="md">Living room Sofa</Heading>
-          <Text>
-            This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
-          </Text>
+          <Heading size="md" textAlign='center'>{pokemon.name}</Heading>
         </Stack>
+        <Text position='absolute' top={0} right={3}>#{pokemonId}</Text>
       </CardBody>
-      <CardFooter>
+      <CardFooter justifyContent='center'>
         <ButtonGroup spacing="2">
-          <Button variant="solid" colorScheme="blue">
-            Buy now
+          <Button variant="solid" backgroundColor="#F1BD35" color='#0C162F'>
+            Detail
           </Button>
         </ButtonGroup>
       </CardFooter>
