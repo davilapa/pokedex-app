@@ -6,11 +6,12 @@ export const useSearchPokemon = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
+    if(!searchTerm) return
     const cleanedSearchTerm = searchTerm.trim().toLowerCase();
     navigate(`/pokemon/${cleanedSearchTerm}`);
   };
 
-  const handleEnterKeyPress = (e) => {
+  const handleEnterKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleSearch();
     }

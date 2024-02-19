@@ -17,7 +17,7 @@ export const SearchPokemon = () => {
           type="search"
         />
         <InputRightElement>
-          <SearchIcon color="#0C162F" onClick={handleSearch} />
+          <SearchIcon color="#0C162F" onClick={handleSearch} data-testid='search-icon' />
         </InputRightElement>
       </InputGroup>
     </Center>
