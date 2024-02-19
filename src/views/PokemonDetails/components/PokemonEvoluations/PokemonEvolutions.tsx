@@ -1,7 +1,7 @@
 import { Badge, Center, Flex, Heading } from "@chakra-ui/react";
 import { usePokemonEvolutions } from "./hooks/usePokemonEvolutions";
 
-export const PokemonEvolutions = ({ pokemonId }) => {
+export const PokemonEvolutions = ({ pokemonId }: { pokemonId: number }) => {
   const { evolutions } = usePokemonEvolutions(pokemonId);
 
   return (

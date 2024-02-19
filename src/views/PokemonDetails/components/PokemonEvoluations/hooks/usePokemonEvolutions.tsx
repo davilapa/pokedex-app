@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { getEvolutionsRecursive } from "../../../../../utils/helpers";
 
-export const usePokemonEvolutions = (pokemonId: string) => {
+export const usePokemonEvolutions = (pokemonId: number) => {
   const [evolutions, setEvolutions] = useState<string[]>([]);
 
-  const fetchPokemonEvolutions = async (pokemonId: string) => {
+  const fetchPokemonEvolutions = async (pokemonId: number) => {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`
     );

@@ -15,7 +15,7 @@ export const PokemonDetails = (): ReactElement => {
     return <PokemonNotFound />;
   }
 
-  const pokemonId = ("000" + pokemon.id).slice(-3) ?? "1";
+  const pokemonId = ("000" + pokemon.id).slice(-3) ?? "001";
 
   return (
     <>
