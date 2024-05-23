@@ -8,7 +8,7 @@ export const Header = () => {
       textAlign="center"
       paddingY="10px"
     >
-      Consubanco Pokedex
+      Pokedex App
     </Heading>
   );
 };

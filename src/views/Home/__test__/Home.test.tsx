@@ -32,7 +32,7 @@ describe("Home", () => {
       </MemoryRouter>
     );
 
-    expect(getByText("Consubanco Pokedex")).toBeTruthy();
+    expect(getByText("Pokedex App")).toBeTruthy();
     expect(getByPlaceholderText("Search by name or id")).toBeTruthy();
     expect(getByText("Pikachu")).toBeTruthy();
     expect(getByText("Charmander")).toBeTruthy();
